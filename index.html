@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/80de5dbfd3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <div class="titulo-principal">
+            <img src="imagenes/Logo.png" alt="Logo de alura">
+        </div>
+    </header>
+    <main>
+        <div class="principal">
+
+            <form>
+                <label><textarea name="mensaje" id="mensaje" cols="70" rows="12" class="entrada"
+                        placeholder="Ingrese el texto aqui" onkeyup="normalizarTexto()"></textarea></label>
+
+                <p><i class="fa-sharp fa-solid fa-circle-exclamation" style="color: #979191;"></i> solo letras
+                    minúsculas y sin acentos.</p>
+                <div class="container-buttons">
+                    <input type="button" value="Encriptar" class="encriptar" id="encriptar">
+                    <input type="button" value="Desencriptar" class="desencriptar" id="desencriptar">
+                </div>
+            </form>
+
+        </div>
+
+        <div class="encriptado">
+            <div class="lista-mensaje">
+                <div id="bloque-error">
+                    <img class="muñeco" src="imagenes/Muñeco.png" alt="Búsquedaa errada">
+                    <h2>Ningún mensaje fue encontrado.</h2>
+                    <p class="descripcion">Ingresa el texto que desees encriptar o desencriptar.</p>
+                </div>
+                <div id="bloque-respuesta">
+                    <label><textarea name="respuesta" id="respuesta" cols="30" rows="15"></textarea></label>
+                    <input type="button" value="Copiar" class="copiar" id="copiar">
+                </div>
+            </div>
+    </main>
+    <footer>
+
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="encriptar.js"></script>
+
+</body>
+
+</html>
